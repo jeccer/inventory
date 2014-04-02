@@ -1,4 +1,27 @@
 Inventory::Application.routes.draw do
+  get "index/home"
+  get "index/loadDatabase"
+  resources :client_extracts
+  
+  resources :client_extracts do
+    collection { post :import }
+  end
+ 
+  root to: 'index#home'
+  
+  require 'resque/server'
+
+  Inventory::Application.routes.draw do
+    mount Resque::Server.new, at: "/resque"
+  end
+
+ 
+  # require 'resque-web'
+#    
+  # Inventory:Application.routes.draw do
+    # mount ResqueWeb::Engine => "/resque_web"
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

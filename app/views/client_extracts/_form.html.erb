@@ -1,0 +1,81 @@
+<%= form_for(@client_extract) do |f| %>
+  <% if @client_extract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client_extract.errors.count, "error") %> prohibited this client_extract from being saved:</h2>
+
+      <ul>
+      <% @client_extract.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :curr_locn_id %><br>
+    <%= f.text_field :curr_locn_id %>
+  </div>
+  <div class="field">
+    <%= f.label :locn_type %><br>
+    <%= f.text_field :locn_type %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :item_brcd %><br>
+    <%= f.text_field :item_brcd %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :item_desc %><br>
+    <%= f.text_field :item_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :style %><br>
+    <%= f.text_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :std_cs_qty %><br>
+    <%= f.text_field :std_cs_qty %>
+  </div>
+  <div class="field">
+    <%= f.label :min_cs %><br>
+    <%= f.text_field :min_cs %>
+  </div>
+  <div class="field">
+    <%= f.label :max_cs %><br>
+    <%= f.text_field :max_cs %>
+  </div>
+  <div class="field">
+    <%= f.label :min_units %><br>
+    <%= f.text_field :min_units %>
+  </div>
+  <div class="field">
+    <%= f.label :max_units %><br>
+    <%= f.text_field :max_units %>
+  </div>
+  <div class="field">
+    <%= f.label :total_inventory %><br>
+    <%= f.text_field :total_inventory %>
+  </div>
+  <div class="field">
+    <%= f.label :sku_attribute_1 %><br>
+    <%= f.text_field :sku_attribute_1 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

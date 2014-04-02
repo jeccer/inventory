@@ -1,0 +1,57 @@
+<h1>Listing client_extracts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Curr locn</th>
+      <th>Locn type</th>
+      <th>Company</th>
+      <th>Item brcd</th>
+      <th>Item name</th>
+      <th>Item desc</th>
+      <th>Style</th>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Std cs qty</th>
+      <th>Min cs</th>
+      <th>Max cs</th>
+      <th>Min units</th>
+      <th>Max units</th>
+      <th>Total inventory</th>
+      <th>Sku attribute 1</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @client_extracts.each do |client_extract| %>
+      <tr>
+        <td><%= client_extract.curr_locn_id %></td>
+        <td><%= client_extract.locn_type %></td>
+        <td><%= client_extract.company %></td>
+        <td><%= client_extract.item_brcd %></td>
+        <td><%= client_extract.item_name %></td>
+        <td><%= client_extract.item_desc %></td>
+        <td><%= client_extract.style %></td>
+        <td><%= client_extract.color %></td>
+        <td><%= client_extract.size %></td>
+        <td><%= client_extract.std_cs_qty %></td>
+        <td><%= client_extract.min_cs %></td>
+        <td><%= client_extract.max_cs %></td>
+        <td><%= client_extract.min_units %></td>
+        <td><%= client_extract.max_units %></td>
+        <td><%= client_extract.total_inventory %></td>
+        <td><%= client_extract.sku_attribute_1 %></td>
+        <td><%= link_to 'Show', client_extract %></td>
+        <td><%= link_to 'Edit', edit_client_extract_path(client_extract) %></td>
+        <td><%= link_to 'Destroy', client_extract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client extract', new_client_extract_path %>
