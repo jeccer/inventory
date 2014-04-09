@@ -8,9 +8,20 @@ class ClientExtract < ActiveRecord::Base
     end
   end
    
-  def self.import(file)           
-    SmarterCSV.process( file.path, { :chunk_size => 2 }) do |array|
-      Resque.enqueue( ClientExtractChunk, array )
+  def self.load(file)
+
+    records = []
+    i = 0
+    CSV.foreach(file.path, :headers => true) do |row|
+      records << ClientExtract.new(row.to_hash)
+      i = i + 1
+      # if i == 10
+        # ClientExtract.import records, :validate => false
+        # records = []
+        # i = 0
+      # end
     end
-  end
+    ClientExtract.import records, :validate => false
+   end
+    
 end

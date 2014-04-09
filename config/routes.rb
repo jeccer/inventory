@@ -9,12 +9,9 @@ Inventory::Application.routes.draw do
  
   root to: 'index#home'
   
-  require 'resque/server'
 
-  Inventory::Application.routes.draw do
-    mount Resque::Server.new, at: "/resque"
-  end
-
+  mount Resque::Server, at: "/resque"
+ 
  
   # require 'resque-web'
 #    

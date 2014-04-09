@@ -10,9 +10,11 @@ gem 'execjs'
 
 # Project Gems
 gem 'smarter_csv'
-gem 'resque'
+gem 'resque', :require => "resque/server"
 # gem 'resque-web', require: 'resque_web'
 gem 'vegas'
+gem 'awesome_print', :require => 'ap'
+gem 'activerecord-import', '~> 0.5.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
