@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140331014629) do
+ActiveRecord::Schema.define(version: 20140410230614) do
 
   create_table "client_extracts", force: true do |t|
     t.string   "curr_locn_id"
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 20140331014629) do
     t.string   "max_units"
     t.string   "total_inventory"
     t.string   "sku_attribute_1"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locn_xref_masters", force: true do |t|
+    t.string   "boss_locn"
+    t.string   "ma_area"
+    t.string   "ma_zone"
+    t.string   "ma_aisle"
+    t.string   "ma_bay"
+    t.string   "ma_level"
+    t.string   "ma_position"
+    t.string   "dsp_locn"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

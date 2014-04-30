@@ -41,6 +41,11 @@ class ClientExtractsController < ApplicationController
     end
   end
  
+  def count
+    @client_extract = calculate :count
+    
+  end
+ 
   def import
     ClientExtract.load(params[:file])
     redirect_to root_url, notice: "Client extract data imported."

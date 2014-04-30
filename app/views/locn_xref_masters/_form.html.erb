@@ -1,0 +1,49 @@
+<%= form_for(@locn_xref_master) do |f| %>
+  <% if @locn_xref_master.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@locn_xref_master.errors.count, "error") %> prohibited this locn_xref_master from being saved:</h2>
+
+      <ul>
+      <% @locn_xref_master.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :boss_locn %><br>
+    <%= f.text_field :boss_locn %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_area %><br>
+    <%= f.text_field :ma_area %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_zone %><br>
+    <%= f.text_field :ma_zone %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_aisle %><br>
+    <%= f.text_field :ma_aisle %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_bay %><br>
+    <%= f.text_field :ma_bay %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_level %><br>
+    <%= f.text_field :ma_level %>
+  </div>
+  <div class="field">
+    <%= f.label :ma_position %><br>
+    <%= f.text_field :ma_position %>
+  </div>
+  <div class="field">
+    <%= f.label :dsp_locn %><br>
+    <%= f.text_field :dsp_locn %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

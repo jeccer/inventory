@@ -1,0 +1,41 @@
+<h1>Listing locn_xref_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Boss locn</th>
+      <th>Ma area</th>
+      <th>Ma zone</th>
+      <th>Ma aisle</th>
+      <th>Ma bay</th>
+      <th>Ma level</th>
+      <th>Ma position</th>
+      <th>Dsp locn</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locn_xref_masters.each do |locn_xref_master| %>
+      <tr>
+        <td><%= locn_xref_master.boss_locn %></td>
+        <td><%= locn_xref_master.ma_area %></td>
+        <td><%= locn_xref_master.ma_zone %></td>
+        <td><%= locn_xref_master.ma_aisle %></td>
+        <td><%= locn_xref_master.ma_bay %></td>
+        <td><%= locn_xref_master.ma_level %></td>
+        <td><%= locn_xref_master.ma_position %></td>
+        <td><%= locn_xref_master.dsp_locn %></td>
+        <td><%= link_to 'Show', locn_xref_master %></td>
+        <td><%= link_to 'Edit', edit_locn_xref_master_path(locn_xref_master) %></td>
+        <td><%= link_to 'Destroy', locn_xref_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Locn xref master', new_locn_xref_master_path %>

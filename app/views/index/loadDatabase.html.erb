@@ -5,4 +5,13 @@
 <%= form_tag import_client_extracts_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
+  <%= ClientExtract.count %>
+<% end %>
+
+<h2>Import Location Cross Reference Master</h2>
+
+<%= form_tag import_locn_xref_masters_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+  <%= LocnXrefMaster.count %>
 <% end %>

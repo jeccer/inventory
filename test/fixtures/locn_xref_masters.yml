@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  boss_locn: MyString
+  ma_area: MyString
+  ma_zone: MyString
+  ma_aisle: MyString
+  ma_bay: MyString
+  ma_level: MyString
+  ma_position: MyString
+  dsp_locn: MyString
+
+two:
+  boss_locn: MyString
+  ma_area: MyString
+  ma_zone: MyString
+  ma_aisle: MyString
+  ma_bay: MyString
+  ma_level: MyString
+  ma_position: MyString
+  dsp_locn: MyString

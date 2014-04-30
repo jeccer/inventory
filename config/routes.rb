@@ -1,9 +1,16 @@
 Inventory::Application.routes.draw do
+  resources :locn_xref_masters
+
   get "index/home"
   get "index/loadDatabase"
-  resources :client_extracts
   
+  resources :client_extracts  
   resources :client_extracts do
+    collection { post :import }
+  end
+ 
+  resources :locn_xref_masters
+  resources :locn_xref_masters do
     collection { post :import }
   end
  
@@ -16,6 +23,8 @@ Inventory::Application.routes.draw do
   # require 'resque-web'
 #    
   # Inventory:Application.routes.draw do
+  resources :locn_xref_masters
+
     # mount ResqueWeb::Engine => "/resque_web"
   # end
 
