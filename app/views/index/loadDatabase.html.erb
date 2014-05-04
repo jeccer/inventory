@@ -1,17 +1,22 @@
 <h1>Database Upload</h1>
 
 <h2>Import Client Extract</h2>
-
+<h3>Current Client Extract Contains <%= ClientExtract.count %> Items</h3>
 <%= form_tag import_client_extracts_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
-  <%= ClientExtract.count %>
+<% end %>
+
+<h2>Import Item Master</h2>
+<h3>Item Master Contains <%= ItemMaster.count %> Items</h3>
+<%= form_tag import_item_masters_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
 <% end %>
 
 <h2>Import Location Cross Reference Master</h2>
-
+<h3>Current Location Cross Reference Master Contains <%= LocnXrefMaster.count %> Items</h3>
 <%= form_tag import_locn_xref_masters_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
-  <%= LocnXrefMaster.count %>
 <% end %>

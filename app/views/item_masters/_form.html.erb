@@ -1,0 +1,281 @@
+<%= form_for(@item_master) do |f| %>
+  <% if @item_master.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item_master.errors.count, "error") %> prohibited this item_master from being saved:</h2>
+
+      <ul>
+      <% @item_master.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company_id %><br>
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br>
+    <%= f.text_field :item_name %>
+  </div>
+  <div class="field">
+    <%= f.label :business_partner_id %><br>
+    <%= f.text_field :business_partner_id %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :protection_level_id %><br>
+    <%= f.text_field :protection_level_id %>
+  </div>
+  <div class="field">
+    <%= f.label :commodity_class_id %><br>
+    <%= f.text_field :commodity_class_id %>
+  </div>
+  <div class="field">
+    <%= f.label :commodity_code_id %><br>
+    <%= f.text_field :commodity_code_id %>
+  </div>
+  <div class="field">
+    <%= f.label :product_class_id %><br>
+    <%= f.text_field :product_class_id %>
+  </div>
+  <div class="field">
+    <%= f.label :un_number_id %><br>
+    <%= f.text_field :un_number_id %>
+  </div>
+  <div class="field">
+    <%= f.label :is_generic_item %><br>
+    <%= f.text_field :is_generic_item %>
+  </div>
+  <div class="field">
+    <%= f.label :base_storage_uom_id %><br>
+    <%= f.text_field :base_storage_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :item_season %><br>
+    <%= f.text_field :item_season %>
+  </div>
+  <div class="field">
+    <%= f.label :item_season_year %><br>
+    <%= f.text_field :item_season_year %>
+  </div>
+  <div class="field">
+    <%= f.label :item_style %><br>
+    <%= f.text_field :item_style %>
+  </div>
+  <div class="field">
+    <%= f.label :item_style_sfx %><br>
+    <%= f.text_field :item_style_sfx %>
+  </div>
+  <div class="field">
+    <%= f.label :item_color %><br>
+    <%= f.text_field :item_color %>
+  </div>
+  <div class="field">
+    <%= f.label :item_color_sfx %><br>
+    <%= f.text_field :item_color_sfx %>
+  </div>
+  <div class="field">
+    <%= f.label :item_second_dim %><br>
+    <%= f.text_field :item_second_dim %>
+  </div>
+  <div class="field">
+    <%= f.label :item_quality %><br>
+    <%= f.text_field :item_quality %>
+  </div>
+  <div class="field">
+    <%= f.label :item_size_desc %><br>
+    <%= f.text_field :item_size_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :item_bar_code %><br>
+    <%= f.text_field :item_bar_code %>
+  </div>
+  <div class="field">
+    <%= f.label :item_desc_short %><br>
+    <%= f.text_field :item_desc_short %>
+  </div>
+  <div class="field">
+    <%= f.label :item_upc_gtin %><br>
+    <%= f.text_field :item_upc_gtin %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_weight %><br>
+    <%= f.text_field :unit_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :weight_uom_id %><br>
+    <%= f.text_field :weight_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_volume %><br>
+    <%= f.text_field :unit_volume %>
+  </div>
+  <div class="field">
+    <%= f.label :volume_uom_id %><br>
+    <%= f.text_field :volume_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_height %><br>
+    <%= f.text_field :unit_height %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_width %><br>
+    <%= f.text_field :unit_width %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_length %><br>
+    <%= f.text_field :unit_length %>
+  </div>
+  <div class="field">
+    <%= f.label :dimension_uom_id %><br>
+    <%= f.text_field :dimension_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :variable_weight %><br>
+    <%= f.text_field :variable_weight %>
+  </div>
+  <div class="field">
+    <%= f.label :database_qty_uom_id %><br>
+    <%= f.text_field :database_qty_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :display_qty_uom_id %><br>
+    <%= f.text_field :display_qty_uom_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status_code %><br>
+    <%= f.text_field :status_code %>
+  </div>
+  <div class="field">
+    <%= f.label :item_image_filename %><br>
+    <%= f.text_field :item_image_filename %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_created_source %><br>
+    <%= f.text_field :audit_created_source %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_created_source_type %><br>
+    <%= f.text_field :audit_created_source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_created_dttm %><br>
+    <%= f.text_field :audit_created_dttm %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_last_updated_source %><br>
+    <%= f.text_field :audit_last_updated_source %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_last_updated_source_type %><br>
+    <%= f.text_field :audit_last_updated_source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :audit_last_updated_dttm %><br>
+    <%= f.text_field :audit_last_updated_dttm %>
+  </div>
+  <div class="field">
+    <%= f.label :mark_for_deletion %><br>
+    <%= f.text_field :mark_for_deletion %>
+  </div>
+  <div class="field">
+    <%= f.label :catch_weight_item %><br>
+    <%= f.text_field :catch_weight_item %>
+  </div>
+  <div class="field">
+    <%= f.label :commodity_level_desc %><br>
+    <%= f.text_field :commodity_level_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :channel_type_id %><br>
+    <%= f.text_field :channel_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :color_desc %><br>
+    <%= f.text_field :color_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :size_uom %><br>
+    <%= f.text_field :size_uom %>
+  </div>
+  <div class="field">
+    <%= f.label :hazmat_code %><br>
+    <%= f.text_field :hazmat_code %>
+  </div>
+  <div class="field">
+    <%= f.label :commodity_code %><br>
+    <%= f.text_field :commodity_code %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br>
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :item_quality_code %><br>
+    <%= f.text_field :item_quality_code %>
+  </div>
+  <div class="field">
+    <%= f.label :prod_type %><br>
+    <%= f.text_field :prod_type %>
+  </div>
+  <div class="field">
+    <%= f.label :std_bundl_qty %><br>
+    <%= f.text_field :std_bundl_qty %>
+  </div>
+  <div class="field">
+    <%= f.label :stab_code %><br>
+    <%= f.text_field :stab_code %>
+  </div>
+  <div class="field">
+    <%= f.label :item_orientation %><br>
+    <%= f.text_field :item_orientation %>
+  </div>
+  <div class="field">
+    <%= f.label :protn_factor %><br>
+    <%= f.text_field :protn_factor %>
+  </div>
+  <div class="field">
+    <%= f.label :cavity_len %><br>
+    <%= f.text_field :cavity_len %>
+  </div>
+  <div class="field">
+    <%= f.label :cavity_wd %><br>
+    <%= f.text_field :cavity_wd %>
+  </div>
+  <div class="field">
+    <%= f.label :cavity_ht %><br>
+    <%= f.text_field :cavity_ht %>
+  </div>
+  <div class="field">
+    <%= f.label :incremental_len %><br>
+    <%= f.text_field :incremental_len %>
+  </div>
+  <div class="field">
+    <%= f.label :incremental_wd %><br>
+    <%= f.text_field :incremental_wd %>
+  </div>
+  <div class="field">
+    <%= f.label :incremental_ht %><br>
+    <%= f.text_field :incremental_ht %>
+  </div>
+  <div class="field">
+    <%= f.label :stackable_item %><br>
+    <%= f.text_field :stackable_item %>
+  </div>
+  <div class="field">
+    <%= f.label :max_nest_number %><br>
+    <%= f.text_field :max_nest_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

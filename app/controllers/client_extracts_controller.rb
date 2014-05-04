@@ -41,10 +41,10 @@ class ClientExtractsController < ApplicationController
     end
   end
  
-  def count
-    @client_extract = calculate :count
-    
-  end
+  # def count
+    # @client_extract = calculate :count
+#     
+  # end
  
   def import
     ClientExtract.load(params[:file])

@@ -1,0 +1,157 @@
+<h1>Listing item_masters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Company</th>
+      <th>Item name</th>
+      <th>Business partner</th>
+      <th>Description</th>
+      <th>Protection level</th>
+      <th>Commodity class</th>
+      <th>Commodity code</th>
+      <th>Product class</th>
+      <th>Un number</th>
+      <th>Is generic item</th>
+      <th>Base storage uom</th>
+      <th>Item season</th>
+      <th>Item season year</th>
+      <th>Item style</th>
+      <th>Item style sfx</th>
+      <th>Item color</th>
+      <th>Item color sfx</th>
+      <th>Item second dim</th>
+      <th>Item quality</th>
+      <th>Item size desc</th>
+      <th>Item bar code</th>
+      <th>Item desc short</th>
+      <th>Item upc gtin</th>
+      <th>Unit weight</th>
+      <th>Weight uom</th>
+      <th>Unit volume</th>
+      <th>Volume uom</th>
+      <th>Unit height</th>
+      <th>Unit width</th>
+      <th>Unit length</th>
+      <th>Dimension uom</th>
+      <th>Variable weight</th>
+      <th>Database qty uom</th>
+      <th>Display qty uom</th>
+      <th>Status code</th>
+      <th>Item image filename</th>
+      <th>Audit created source</th>
+      <th>Audit created source type</th>
+      <th>Audit created dttm</th>
+      <th>Audit last updated source</th>
+      <th>Audit last updated source type</th>
+      <th>Audit last updated dttm</th>
+      <th>Mark for deletion</th>
+      <th>Catch weight item</th>
+      <th>Commodity level desc</th>
+      <th>Channel type</th>
+      <th>Color desc</th>
+      <th>Size uom</th>
+      <th>Hazmat code</th>
+      <th>Commodity code</th>
+      <th>Version</th>
+      <th>Item quality code</th>
+      <th>Prod type</th>
+      <th>Std bundl qty</th>
+      <th>Stab code</th>
+      <th>Item orientation</th>
+      <th>Protn factor</th>
+      <th>Cavity len</th>
+      <th>Cavity wd</th>
+      <th>Cavity ht</th>
+      <th>Incremental len</th>
+      <th>Incremental wd</th>
+      <th>Incremental ht</th>
+      <th>Stackable item</th>
+      <th>Max nest number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_masters.each do |item_master| %>
+      <tr>
+        <td><%= item_master.item_id %></td>
+        <td><%= item_master.company_id %></td>
+        <td><%= item_master.item_name %></td>
+        <td><%= item_master.business_partner_id %></td>
+        <td><%= item_master.description %></td>
+        <td><%= item_master.protection_level_id %></td>
+        <td><%= item_master.commodity_class_id %></td>
+        <td><%= item_master.commodity_code_id %></td>
+        <td><%= item_master.product_class_id %></td>
+        <td><%= item_master.un_number_id %></td>
+        <td><%= item_master.is_generic_item %></td>
+        <td><%= item_master.base_storage_uom_id %></td>
+        <td><%= item_master.item_season %></td>
+        <td><%= item_master.item_season_year %></td>
+        <td><%= item_master.item_style %></td>
+        <td><%= item_master.item_style_sfx %></td>
+        <td><%= item_master.item_color %></td>
+        <td><%= item_master.item_color_sfx %></td>
+        <td><%= item_master.item_second_dim %></td>
+        <td><%= item_master.item_quality %></td>
+        <td><%= item_master.item_size_desc %></td>
+        <td><%= item_master.item_bar_code %></td>
+        <td><%= item_master.item_desc_short %></td>
+        <td><%= item_master.item_upc_gtin %></td>
+        <td><%= item_master.unit_weight %></td>
+        <td><%= item_master.weight_uom_id %></td>
+        <td><%= item_master.unit_volume %></td>
+        <td><%= item_master.volume_uom_id %></td>
+        <td><%= item_master.unit_height %></td>
+        <td><%= item_master.unit_width %></td>
+        <td><%= item_master.unit_length %></td>
+        <td><%= item_master.dimension_uom_id %></td>
+        <td><%= item_master.variable_weight %></td>
+        <td><%= item_master.database_qty_uom_id %></td>
+        <td><%= item_master.display_qty_uom_id %></td>
+        <td><%= item_master.status_code %></td>
+        <td><%= item_master.item_image_filename %></td>
+        <td><%= item_master.audit_created_source %></td>
+        <td><%= item_master.audit_created_source_type %></td>
+        <td><%= item_master.audit_created_dttm %></td>
+        <td><%= item_master.audit_last_updated_source %></td>
+        <td><%= item_master.audit_last_updated_source_type %></td>
+        <td><%= item_master.audit_last_updated_dttm %></td>
+        <td><%= item_master.mark_for_deletion %></td>
+        <td><%= item_master.catch_weight_item %></td>
+        <td><%= item_master.commodity_level_desc %></td>
+        <td><%= item_master.channel_type_id %></td>
+        <td><%= item_master.color_desc %></td>
+        <td><%= item_master.size_uom %></td>
+        <td><%= item_master.hazmat_code %></td>
+        <td><%= item_master.commodity_code %></td>
+        <td><%= item_master.version %></td>
+        <td><%= item_master.item_quality_code %></td>
+        <td><%= item_master.prod_type %></td>
+        <td><%= item_master.std_bundl_qty %></td>
+        <td><%= item_master.stab_code %></td>
+        <td><%= item_master.item_orientation %></td>
+        <td><%= item_master.protn_factor %></td>
+        <td><%= item_master.cavity_len %></td>
+        <td><%= item_master.cavity_wd %></td>
+        <td><%= item_master.cavity_ht %></td>
+        <td><%= item_master.incremental_len %></td>
+        <td><%= item_master.incremental_wd %></td>
+        <td><%= item_master.incremental_ht %></td>
+        <td><%= item_master.stackable_item %></td>
+        <td><%= item_master.max_nest_number %></td>
+        <td><%= link_to 'Show', item_master %></td>
+        <td><%= link_to 'Edit', edit_item_master_path(item_master) %></td>
+        <td><%= link_to 'Destroy', item_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item master', new_item_master_path %>
